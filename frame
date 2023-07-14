@@ -1,0 +1,15 @@
+package demo1;
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+public class Frame{
+
+public static void main(String[] args) {
+
+WebDriver driver = new ChromeDriver();
+System.setProperty("Browser.chrome.driver","C:\\Users\\exam2\\Desktop\\Browser\\chromedriver.exe");
+driver.get("https://demo.guru99.com/test/guru99home/");
+driver.manage().window().maximize();
+driver.switchTo().frame("a077aa5e");
+driver.findElement(By.xpath("html/body/a/img")).click();
+}
+}
