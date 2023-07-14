@@ -1,0 +1,47 @@
+package soc;
+
+import org.openqa.selenium.WebDriver;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import org.testng.Assert;
+
+import org.testng.annotations.*;
+
+public class test {
+
+	public String baseUrl= "https://www.selenium.dev/";
+
+	public WebDriver driver;
+
+	@BeforeTest
+
+	public void setBaseUrl() {
+
+	driver = new ChromeDriver();
+
+	driver.get(baseUrl);
+
+	}
+
+	@Test
+
+	public void verifyHomepageTitle() {
+
+	String expectedTitle="Selenium";
+
+	String actualTitle =driver.getTitle();
+
+	Assert.assertEquals(actualTitle, expectedTitle);
+
+	}
+
+	@AfterTest
+
+	public void endSession() {
+
+	driver.quit();
+
+	}
+
+}
