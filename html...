@@ -1,0 +1,18 @@
+<div bgcolor="pink">
+<center>
+<h1 style="border:2px solid black">
+<form target="_blank">
+<br>your name:<input type="text" name="name"><br>
+<br>Gender :male<input type="radio" name="M" value="Male">
+        female<input type="radio" name="M" value="female"><br>
+<br>languages known:English<input type="checkbox" name="E" value="English">
+                Telugu<input type="checkbox" name="T" value="Telugu"><br>
+<br>your city :<select name="city">
+<option value="guntur">Guntur</option>
+<option value="krishna">krishna</option>
+<input type="Submit" value="submit">
+</select></form>
+</h1>
+</center>
+</div>
+</body></html>
