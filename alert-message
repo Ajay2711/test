@@ -1,0 +1,57 @@
+package alert;
+
+import org.openqa.selenium.By;
+
+import org.openqa.selenium.WebDriver;
+
+import org.openqa.selenium.WebElement;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Alert
+
+{
+
+public static void main(String[] args) throws InterruptedException
+
+{
+
+WebDriver driver = new ChromeDriver();
+
+String URL = "https://selenium08.blogspot.com/2019/07/alert-test.html";
+
+driver.get(URL);
+
+WebElement element = driver.findElement(By.xpath("//button[@id='prompt']"));
+
+element.click();
+
+org.openqa.selenium.Alert alert = driver.switchTo().alert();
+
+alert.sendKeys("Deep");
+
+alert.accept();
+
+WebElement displayMessage = driver.findElement(By.id("prompt_demo"));
+
+String getText = displayMessage.getText();
+
+System.out.println(getText);
+
+if(getText.equalsIgnoreCase("Hello Deep! How are you today?"))
+
+{
+
+System.out.println("Exact matched");
+
+}
+
+else {
+
+System.out.println("Something went wrong");
+
+}
+
+}
+
+}
